@@ -6,7 +6,7 @@ from sklearn.metrics.pairwise import cosine_similarity
 movie=pd.read_csv("C:/Users/hp/Downloads/dataset.csv")
 
 movie['tag'] = movie['genre']+movie['overview']
-movie['l_title']=movie['title'].astype(str).str.lower()
+movie['l_title']=movie['title'].astype(str).str.lower() #add column for movie name in small letters
 
 dataset1=movie[['id','l_title','tag']]
 

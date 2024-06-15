@@ -59,7 +59,6 @@ model.fit(X_train_tfidf, y_train)
 
 y_pred = model.predict(X_test_tfidf)
 
-# Calculate evaluation metrics
 accuracy = accuracy_score(y_test, y_pred)
 precision = precision_score(y_test, y_pred)
 recall = recall_score(y_test, y_pred)
@@ -71,7 +70,7 @@ f1 = f1_score(y_test, y_pred)
 # print(f'Recall: {recall}')
 # print(f'F1 Score: {f1}')
 
-# Function to classify user input text
+
 def classify_text(user_text):
     processed_text = preprocess_text(user_text)
     processed_text = remove_stopwords_and_stem(processed_text)
